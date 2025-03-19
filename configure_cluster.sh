@@ -1,4 +1,6 @@
-age: ./configure_cluster.sh <role> <master_ip> <worker_ips>
+#!/bin/bash
+
+# Usage: ./configure_cluster.sh <role> <master_ip> <worker_ips>
 # Example: ./configure_cluster.sh master 130.238.27.127 "130.238.27.86 130.238.27.161 130.238.27.56 130.238.27.193"
 # Example: ./configure_cluster.sh worker 130.238.27.127
 
