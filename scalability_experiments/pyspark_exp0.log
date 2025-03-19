@@ -1,0 +1,492 @@
+25/03/19 17:26:15 INFO SparkContext: Running Spark version 3.5.5
+25/03/19 17:26:15 INFO SparkContext: OS info Linux, 5.15.0-134-generic, amd64
+25/03/19 17:26:15 INFO SparkContext: Java version 11.0.26
+25/03/19 17:26:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/03/19 17:26:15 INFO ResourceUtils: ==============================================================
+25/03/19 17:26:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/03/19 17:26:15 INFO ResourceUtils: ==============================================================
+25/03/19 17:26:15 INFO SparkContext: Submitted application: Reddit ROUGE Score Calculation
+25/03/19 17:26:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/03/19 17:26:15 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+25/03/19 17:26:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/03/19 17:26:15 INFO SecurityManager: Changing view acls to: ubuntu
+25/03/19 17:26:15 INFO SecurityManager: Changing modify acls to: ubuntu
+25/03/19 17:26:15 INFO SecurityManager: Changing view acls groups to: 
+25/03/19 17:26:15 INFO SecurityManager: Changing modify acls groups to: 
+25/03/19 17:26:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ubuntu; groups with view permissions: EMPTY; users with modify permissions: ubuntu; groups with modify permissions: EMPTY
+25/03/19 17:26:16 INFO Utils: Successfully started service 'sparkDriver' on port 38225.
+25/03/19 17:26:16 INFO SparkEnv: Registering MapOutputTracker
+25/03/19 17:26:16 INFO SparkEnv: Registering BlockManagerMaster
+25/03/19 17:26:16 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/03/19 17:26:16 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/03/19 17:26:16 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/03/19 17:26:16 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-602888a3-e830-4907-bc60-9f682b97b229
+25/03/19 17:26:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/03/19 17:26:16 INFO SparkEnv: Registering OutputCommitCoordinator
+25/03/19 17:26:17 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/03/19 17:26:17 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://192.168.2.252:7077...
+25/03/19 17:26:17 INFO TransportClientFactory: Successfully created connection to /192.168.2.252:7077 after 47 ms (0 ms spent in bootstraps)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250319172617-0003
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/0 on worker-20250319163331-192.168.2.167-35459 (192.168.2.167:35459) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/0 on hostPort 192.168.2.167:35459 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/1 on worker-20250319163331-192.168.2.167-35459 (192.168.2.167:35459) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/1 on hostPort 192.168.2.167:35459 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/2 on worker-20250319163331-192.168.2.167-35459 (192.168.2.167:35459) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/2 on hostPort 192.168.2.167:35459 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/3 on worker-20250319163331-192.168.2.88-38679 (192.168.2.88:38679) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/3 on hostPort 192.168.2.88:38679 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/4 on worker-20250319163331-192.168.2.88-38679 (192.168.2.88:38679) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/4 on hostPort 192.168.2.88:38679 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/5 on worker-20250319163331-192.168.2.88-38679 (192.168.2.88:38679) with 1 core(s)
+25/03/19 17:26:17 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41223.
+25/03/19 17:26:17 INFO NettyBlockTransferService: Server created on group27-v3-master:41223
+25/03/19 17:26:17 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/5 on hostPort 192.168.2.88:38679 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/6 on worker-20250319163330-192.168.2.74-33067 (192.168.2.74:33067) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/6 on hostPort 192.168.2.74:33067 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/7 on worker-20250319163330-192.168.2.74-33067 (192.168.2.74:33067) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/7 on hostPort 192.168.2.74:33067 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/8 on worker-20250319163330-192.168.2.74-33067 (192.168.2.74:33067) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/8 on hostPort 192.168.2.74:33067 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/9 on worker-20250319163331-192.168.2.241-33323 (192.168.2.241:33323) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/9 on hostPort 192.168.2.241:33323 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/10 on worker-20250319163331-192.168.2.241-33323 (192.168.2.241:33323) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/10 on hostPort 192.168.2.241:33323 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20250319172617-0003/11 on worker-20250319163331-192.168.2.241-33323 (192.168.2.241:33323) with 1 core(s)
+25/03/19 17:26:17 INFO StandaloneSchedulerBackend: Granted executor ID app-20250319172617-0003/11 on hostPort 192.168.2.241:33323 with 1 core(s), 2.0 GiB RAM
+25/03/19 17:26:17 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, group27-v3-master, 41223, None)
+25/03/19 17:26:17 INFO BlockManagerMasterEndpoint: Registering block manager group27-v3-master:41223 with 434.4 MiB RAM, BlockManagerId(driver, group27-v3-master, 41223, None)
+25/03/19 17:26:17 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, group27-v3-master, 41223, None)
+25/03/19 17:26:17 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, group27-v3-master, 41223, None)
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/6 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/10 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/9 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/11 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/7 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/5 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/8 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/2 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/0 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/4 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/3 is now RUNNING
+25/03/19 17:26:17 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20250319172617-0003/1 is now RUNNING
+25/03/19 17:26:18 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+25/03/19 17:26:18 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/03/19 17:26:18 INFO SharedState: Warehouse path is 'file:/home/ubuntu/DE_1TD169_project_2025/scalability_experiments/spark-warehouse'.
+25/03/19 17:26:20 INFO InMemoryFileIndex: It took 130 ms to list leaf files for 1 paths.
+25/03/19 17:26:22 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.74:59660) with ID 7,  ResourceProfileId 0
+25/03/19 17:26:22 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.74:59688) with ID 8,  ResourceProfileId 0
+25/03/19 17:26:22 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.74:39833 with 1048.8 MiB RAM, BlockManagerId(7, 192.168.2.74, 39833, None)
+25/03/19 17:26:22 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.74:36239 with 1048.8 MiB RAM, BlockManagerId(8, 192.168.2.74, 36239, None)
+25/03/19 17:26:22 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.74:59692) with ID 6,  ResourceProfileId 0
+25/03/19 17:26:22 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.74:35903 with 1048.8 MiB RAM, BlockManagerId(6, 192.168.2.74, 35903, None)
+25/03/19 17:26:23 INFO FileSourceStrategy: Pushed Filters: 
+25/03/19 17:26:23 INFO FileSourceStrategy: Post-Scan Filters: 
+25/03/19 17:26:23 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.7 KiB, free 434.2 MiB)
+25/03/19 17:26:23 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.6 KiB, free 434.2 MiB)
+25/03/19 17:26:23 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on group27-v3-master:41223 (size: 34.6 KiB, free: 434.4 MiB)
+25/03/19 17:26:23 INFO SparkContext: Created broadcast 0 from javaToPython at NativeMethodAccessorImpl.java:0
+25/03/19 17:26:23 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+25/03/19 17:26:23 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.167:38398) with ID 1,  ResourceProfileId 0
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.167:38386) with ID 2,  ResourceProfileId 0
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.167:42915 with 1048.8 MiB RAM, BlockManagerId(1, 192.168.2.167, 42915, None)
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.167:38391 with 1048.8 MiB RAM, BlockManagerId(2, 192.168.2.167, 38391, None)
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.88:42078) with ID 4,  ResourceProfileId 0
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.241:52024) with ID 11,  ResourceProfileId 0
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.241:52028) with ID 9,  ResourceProfileId 0
+25/03/19 17:26:24 INFO SparkContext: Starting job: runJob at PythonRDD.scala:181
+25/03/19 17:26:24 INFO DAGScheduler: Got job 0 (runJob at PythonRDD.scala:181) with 1 output partitions
+25/03/19 17:26:24 INFO DAGScheduler: Final stage: ResultStage 0 (runJob at PythonRDD.scala:181)
+25/03/19 17:26:24 INFO DAGScheduler: Parents of final stage: List()
+25/03/19 17:26:24 INFO DAGScheduler: Missing parents: List()
+25/03/19 17:26:24 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[5] at RDD at PythonRDD.scala:53), which has no missing parents
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.241:43823 with 1048.8 MiB RAM, BlockManagerId(11, 192.168.2.241, 43823, None)
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.88:45817 with 1048.8 MiB RAM, BlockManagerId(4, 192.168.2.88, 45817, None)
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.241:39987 with 1048.8 MiB RAM, BlockManagerId(9, 192.168.2.241, 39987, None)
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.167:38424) with ID 0,  ResourceProfileId 0
+25/03/19 17:26:24 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 17.2 KiB, free 434.2 MiB)
+25/03/19 17:26:24 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 8.6 KiB, free 434.1 MiB)
+25/03/19 17:26:24 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on group27-v3-master:41223 (size: 8.6 KiB, free: 434.4 MiB)
+25/03/19 17:26:24 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.88:42092) with ID 5,  ResourceProfileId 0
+25/03/19 17:26:24 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (PythonRDD[5] at RDD at PythonRDD.scala:53) (first 15 tasks are for partitions Vector(0))
+25/03/19 17:26:24 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.167:44983 with 1048.8 MiB RAM, BlockManagerId(0, 192.168.2.167, 44983, None)
+25/03/19 17:26:24 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (192.168.2.167, executor 1, partition 0, PROCESS_LOCAL, 9621 bytes) 
+25/03/19 17:26:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.88:36833 with 1048.8 MiB RAM, BlockManagerId(5, 192.168.2.88, 36833, None)
+25/03/19 17:26:24 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.241:52034) with ID 10,  ResourceProfileId 0
+25/03/19 17:26:25 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.241:44979 with 1048.8 MiB RAM, BlockManagerId(10, 192.168.2.241, 44979, None)
+25/03/19 17:26:25 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.2.88:42096) with ID 3,  ResourceProfileId 0
+25/03/19 17:26:25 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.2.88:35695 with 1048.8 MiB RAM, BlockManagerId(3, 192.168.2.88, 35695, None)
+25/03/19 17:26:25 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.2.167:42915 (size: 8.6 KiB, free: 1048.8 MiB)
+25/03/19 17:26:31 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.2.167:42915 (size: 34.6 KiB, free: 1048.8 MiB)
+25/03/19 17:26:56 WARN TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0) (192.168.2.167 executor 1): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+25/03/19 17:26:56 INFO TaskSetManager: Starting task 0.1 in stage 0.0 (TID 1) (192.168.2.241, executor 10, partition 0, PROCESS_LOCAL, 9621 bytes) 
+25/03/19 17:26:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.2.241:44979 (size: 8.6 KiB, free: 1048.8 MiB)
+25/03/19 17:27:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.2.241:44979 (size: 34.6 KiB, free: 1048.8 MiB)
+25/03/19 17:27:25 WARN TaskSetManager: Lost task 0.1 in stage 0.0 (TID 1) (192.168.2.241 executor 10): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+25/03/19 17:27:25 INFO TaskSetManager: Starting task 0.2 in stage 0.0 (TID 2) (192.168.2.241, executor 11, partition 0, PROCESS_LOCAL, 9621 bytes) 
+25/03/19 17:27:26 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.2.241:43823 (size: 8.6 KiB, free: 1048.8 MiB)
+25/03/19 17:27:28 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.2.241:43823 (size: 34.6 KiB, free: 1048.8 MiB)
+25/03/19 17:27:50 WARN TaskSetManager: Lost task 0.2 in stage 0.0 (TID 2) (192.168.2.241 executor 11): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+25/03/19 17:27:50 INFO TaskSetManager: Starting task 0.3 in stage 0.0 (TID 3) (192.168.2.241, executor 9, partition 0, PROCESS_LOCAL, 9621 bytes) 
+25/03/19 17:27:50 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.2.241:39987 (size: 8.6 KiB, free: 1048.8 MiB)
+25/03/19 17:27:52 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.2.241:39987 (size: 34.6 KiB, free: 1048.8 MiB)
+25/03/19 17:28:12 WARN TaskSetManager: Lost task 0.3 in stage 0.0 (TID 3) (192.168.2.241 executor 9): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+25/03/19 17:28:12 ERROR TaskSetManager: Task 0 in stage 0.0 failed 4 times; aborting job
+25/03/19 17:28:12 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/03/19 17:28:12 INFO TaskSchedulerImpl: Cancelling stage 0
+25/03/19 17:28:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage cancelled: Job aborted due to stage failure: Task 0 in stage 0.0 failed 4 times, most recent failure: Lost task 0.3 in stage 0.0 (TID 3) (192.168.2.241 executor 9): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+Driver stacktrace:
+25/03/19 17:28:12 INFO DAGScheduler: ResultStage 0 (runJob at PythonRDD.scala:181) failed in 107.976 s due to Job aborted due to stage failure: Task 0 in stage 0.0 failed 4 times, most recent failure: Lost task 0.3 in stage 0.0 (TID 3) (192.168.2.241 executor 9): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+Driver stacktrace:
+25/03/19 17:28:12 INFO DAGScheduler: Job 0 failed: runJob at PythonRDD.scala:181, took 108.046083 s
+ERROR:__main__:Failed to read JSONL: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.runJob.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 4 times, most recent failure: Lost task 0.3 in stage 0.0 (TID 3) (192.168.2.241 executor 9): org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2856)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2792)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2791)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2791)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1247)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1247)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1247)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3060)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2994)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2983)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:989)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2393)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2414)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2433)
+	at org.apache.spark.api.python.PythonRDD$.runJob(PythonRDD.scala:181)
+	at org.apache.spark.api.python.PythonRDD.runJob(PythonRDD.scala)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.spark.SparkException: Encountered error while reading file hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json. Details:
+	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotReadFilesError(QueryExecutionErrors.scala:864)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:296)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.ContextAwareIterator.hasNext(ContextAwareIterator.scala:39)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.hasNext(SerDeUtil.scala:86)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at org.apache.spark.api.python.SerDeUtil$AutoBatchedPickler.foreach(SerDeUtil.scala:80)
+	at org.apache.spark.api.python.PythonRDD$.writeIteratorToStream(PythonRDD.scala:322)
+	at org.apache.spark.api.python.PythonRunner$$anon$2.writeIteratorToStream(PythonRunner.scala:751)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.$anonfun$run$1(PythonRunner.scala:451)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.api.python.BasePythonRunner$WriterThread.run(PythonRunner.scala:282)
+Caused by: org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block: BP-203515895-192.168.2.127-1742394163836:blk_1073741825_1001 file=/reddit_data/mini_data_10.json No live nodes contain current block Block locations: Dead nodes: 
+	at org.apache.hadoop.hdfs.DFSInputStream.refetchLocations(DFSInputStream.java:1007)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:990)
+	at org.apache.hadoop.hdfs.DFSInputStream.chooseDataNode(DFSInputStream.java:969)
+	at org.apache.hadoop.hdfs.DFSInputStream.blockSeekTo(DFSInputStream.java:677)
+	at org.apache.hadoop.hdfs.DFSInputStream.readWithStrategy(DFSInputStream.java:884)
+	at org.apache.hadoop.hdfs.DFSInputStream.read(DFSInputStream.java:957)
+	at java.base/java.io.DataInputStream.read(DataInputStream.java:149)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:131)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:286)
+	... 13 more
+
+25/03/19 17:28:12 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/03/19 17:28:12 INFO SparkUI: Stopped Spark web UI at http://group27-v3-master:4040
+25/03/19 17:28:12 INFO StandaloneSchedulerBackend: Shutting down all executors
+25/03/19 17:28:12 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+25/03/19 17:28:12 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/03/19 17:28:12 INFO MemoryStore: MemoryStore cleared
+25/03/19 17:28:12 INFO BlockManager: BlockManager stopped
+25/03/19 17:28:12 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/03/19 17:28:12 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/03/19 17:28:12 INFO SparkContext: Successfully stopped SparkContext
+INFO:py4j.clientserver:Closing down clientserver connection
+25/03/19 17:28:13 INFO ShutdownHookManager: Shutdown hook called
+25/03/19 17:28:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-0234716a-ee4c-401b-b102-005105388e08/pyspark-8bb7405a-9208-4e90-8468-d99141ef3001
+25/03/19 17:28:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-0234716a-ee4c-401b-b102-005105388e08
+25/03/19 17:28:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-cdb2b9e6-690d-4f54-81f3-65e17b6d6aaf
