@@ -15,19 +15,19 @@ sudo apt install -y openjdk-11-jdk python3 python3-pip openssh-server
 sudo systemctl enable ssh && sudo systemctl start ssh
 echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> ~/.bashrc
 
-echo "Installing Hadoop..."
-wget -q https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz || { echo "Hadoop download failed"; exit 1; }
-tar -xzf hadoop-3.3.6.tar.gz
-sudo rm -rf /usr/local/hadoop  # Clean up old install
-sudo mv hadoop-3.3.6 /usr/local/hadoop
-echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
-echo "export PATH=\$PATH:\$HADOOP_HOME/bin:\$HADOOP_HOME/sbin" >> ~/.bashrc
+#echo "Installing Hadoop..."
+#wget -q https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz || { echo "Hadoop download failed"; exit 1; }
+#tar -xzf hadoop-3.3.6.tar.gz
+#sudo rm -rf /usr/local/hadoop  # Clean up old install
+#sudo mv hadoop-3.3.6 /usr/local/hadoop
+#echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
+#echo "export PATH=\$PATH:\$HADOOP_HOME/bin:\$HADOOP_HOME/sbin" >> ~/.bashrc
 
 echo "Installing Spark..."
-wget -q https://downloads.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz || { echo "Spark download failed"; exit 1; }
-tar -xzf spark-3.5.0-bin-hadoop3.tgz
+wget -q https://www.apache.org/dyn/closer.lua/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz || { echo "Spark download failed"; exit 1; }
+tar -xzf spark-3.5*
 sudo rm -rf /usr/local/spark  # Clean up old install
-sudo mv spark-3.5.0-bin-hadoop3 /usr/local/spark
+sudo mv spark-3.5* /usr/local/spark
 echo "export SPARK_HOME=/usr/local/spark" >> ~/.bashrc
 echo "export PATH=\$PATH:\$SPARK_HOME/bin" >> ~/.bashrc
 
