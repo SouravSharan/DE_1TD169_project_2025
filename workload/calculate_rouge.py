@@ -1,93 +1,67 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import udf
-from pyspark.sql.types import StructType, StructField, StringType, FloatType
-from rouge import Rouge
-import json
-import logging
-
-# Set up logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from pyspark.sql.functions import col
+from rouge_score import rouge_scorer
 
 # Initialize Spark session
 spark = SparkSession.builder \
-    .appName("Reddit ROUGE Score Calculation") \
-    .master("spark://192.168.2.252:7077") \
-    .config("spark.executor.memory", "2g") \
-    .config("spark.executor.cores", "1") \
+    .appName("ROUGE Score Calculation") \
     .getOrCreate()
 
-# Define ROUGE calculation function
-def calculate_rouge(reference, hypothesis):
-    try:
-        if not reference or not hypothesis:
-            logger.warning("Empty reference or hypothesis")
-            return {"rouge-1": 0.0, "rouge-2": 0.0, "rouge-l": 0.0}
-        rouge = Rouge()
-        scores = rouge.get_scores(hypothesis, reference)[0]
-        return {
-            "rouge-1": scores["rouge-1"]["f"],
-            "rouge-2": scores["rouge-2"]["f"],
-            "rouge-l": scores["rouge-l"]["f"]
-        }
-    except Exception as e:
-        logger.error(f"ROUGE calculation failed: {str(e)}")
-        return {"rouge-1": 0.0, "rouge-2": 0.0, "rouge-l": 0.0}
+# Load the data from HDFS
+df = spark.read.json("hdfs://group27-v5-cluster-master:9000/small_data/mini_data_10.json")
 
-# Register UDF
-rouge_udf = udf(calculate_rouge, 
-                StructType([
-                    StructField("rouge-1", FloatType(), False),
-                    StructField("rouge-2", FloatType(), False),
-                    StructField("rouge-l", FloatType(), False)
-                ]))
+# Check the schema to verify the columns
+df.printSchema()
 
-# Read JSONL file as text and parse
-data_path = "hdfs://192.168.2.252:9000/reddit_data/mini_data_10.json"
-try:
-    # Read as text lines
-    text_df = spark.read.text(data_path)
-    # Parse each line as JSON
-    parsed_df = text_df.rdd.map(lambda row: json.loads(row.value)).toDF()
-    parsed_df.printSchema()  # Debug: Show schema
-    parsed_df.show(5, truncate=False)  # Debug: Show sample data
-except Exception as e:
-    logger.error(f"Failed to read JSONL: {str(e)}")
-    spark.stop()
-    exit(1)
+# Show some example data
+df.show(5)
 
-# Select body and summary, drop nulls
-df_with_summary = parsed_df.select(
-    "body",
-    "summary"
-).na.drop()
+# Initialize the ROUGE scorer
+scorer = rouge_scorer.RougeScorer(
+    ['rouge1', 'rouge2', 'rougeL'],  # List of metrics as first argument
+    use_stemmer=True  # Optional: enables stemming for better scoring
+)
 
-# Calculate ROUGE scores
-rouge_df = df_with_summary.withColumn("rouge_scores", rouge_udf("body", "summary"))
-result_df = rouge_df.select(
-    "body",
-    "summary",
-    rouge_df.rouge_scores["rouge-1"].alias("rouge_1_f"),
-    rouge_df.rouge_scores["rouge-2"].alias("rouge_2_f"),
-    rouge_df.rouge_scores["rouge-l"].alias("rouge_l_f")
+# Define a function to calculate ROUGE score for each row
+def calculate_rouge(summary, content):
+    if not summary or not content:
+        return 0.0, 0.0, 0.0  # Handle null/empty inputs
+    scores = scorer.score(content, summary)
+    return scores['rouge1'].fmeasure, scores['rouge2'].fmeasure, scores['rougeL'].fmeasure
+
+# Register the UDF for PySpark
+from pyspark.sql.functions import udf
+from pyspark.sql.types import StructType, StructField, FloatType
+
+# Define schema for ROUGE scores (rouge1, rouge2, rougeL)
+rouge_schema = StructType([
+    StructField('rouge1', FloatType(), True),
+    StructField('rouge2', FloatType(), True),
+    StructField('rougeL', FloatType(), True)
+])
+
+# Register the UDF
+rouge_udf = udf(lambda summary, content: calculate_rouge(summary, content), rouge_schema)
+
+# Apply the UDF to calculate ROUGE scores
+df_with_rouge = df.withColumn("rouge_scores", rouge_udf(col('summary'), col('content')))
+
+# Extract individual ROUGE scores
+df_with_rouge = df_with_rouge.select(
+    'author',
+    'subreddit',
+    'summary',
+    'content',
+    'rouge_scores.rouge1',
+    'rouge_scores.rouge2',
+    'rouge_scores.rougeL'
 )
 
 # Show results
-result_df.show(truncate=False)
+df_with_rouge.show(10)
 
-# Compute average scores
-avg_scores = result_df.agg({
-    "rouge_1_f": "avg",
-    "rouge_2_f": "avg",
-    "rouge_l_f": "avg"
-}).collect()[0]
-
-print(f"Average ROUGE-1 F-Score: {avg_scores['avg(rouge_1_f)']:.4f}")
-print(f"Average ROUGE-2 F-Score: {avg_scores['avg(rouge_2_f)']:.4f}")
-print(f"Average ROUGE-L F-Score: {avg_scores['avg(rouge_l_f)']:.4f}")
-
-# Save results to HDFS
-result_df.write.mode("overwrite").parquet("hdfs://192.168.2.252:9000/reddit_data/rouge_results")
+# Save the results to HDFS in the /outputs directory
+df_with_rouge.write.mode("overwrite").json("hdfs://group27-v5-cluster-master:9000/outputs/rouge_results.json")
 
 # Stop Spark session
 spark.stop()
