@@ -1,0 +1,33 @@
+Dataset	Workers	Time (s)	Rows	Throughput (rows/s)	Driver CPU (%)	Driver Memory (%)
+2025-03-20 11:58:34,428 - Using default tokenizer.
+2025-03-20 12:06:11,240 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct.json, Workers: 4, Time: 487.66s, Rows: 384833, Throughput: 789.14 rows/s, Driver CPU: 26.3%, Driver Memory: 38.3%
+2025-03-20 12:06:11,241 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:06:12,141 - Closing down clientserver connection
+2025-03-20 12:06:34,746 - Using default tokenizer.
+2025-03-20 12:10:46,477 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_50pct.json, Workers: 3, Time: 268.08s, Rows: 192802, Throughput: 719.21 rows/s, Driver CPU: 27.4%, Driver Memory: 38.2%
+2025-03-20 12:10:46,479 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:10:47,158 - Closing down clientserver connection
+2025-03-20 12:11:08,535 - Using default tokenizer.
+2025-03-20 12:12:49,609 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_20pct.json, Workers: 2, Time: 115.97s, Rows: 76952, Throughput: 663.57 rows/s, Driver CPU: 26.6%, Driver Memory: 38.5%
+2025-03-20 12:12:49,610 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:12:50,327 - Closing down clientserver connection
+2025-03-20 12:13:13,847 - Using default tokenizer.
+2025-03-20 12:14:07,112 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_10pct.json, Workers: 1, Time: 68.13s, Rows: 38407, Throughput: 563.71 rows/s, Driver CPU: 24.2%, Driver Memory: 37.9%
+2025-03-20 12:14:07,114 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:14:07,868 - Closing down clientserver connection
+2025-03-20 12:14:54,502 - Using default tokenizer.
+2025-03-20 12:22:40,460 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct.json, Workers: 2, Time: 506.40s, Rows: 384833, Throughput: 759.94 rows/s, Driver CPU: 26.6%, Driver Memory: 38.4%
+2025-03-20 12:22:40,462 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:22:40,833 - Closing down clientserver connection
+2025-03-20 12:23:06,580 - Using default tokenizer.
+2025-03-20 12:27:18,790 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_50pct.json, Workers: 2, Time: 270.87s, Rows: 192802, Throughput: 711.79 rows/s, Driver CPU: 22.7%, Driver Memory: 38.4%
+2025-03-20 12:27:18,791 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:27:19,780 - Closing down clientserver connection
+2025-03-20 12:27:41,165 - Using default tokenizer.
+2025-03-20 12:29:32,766 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_20pct.json, Workers: 2, Time: 126.61s, Rows: 76952, Throughput: 607.81 rows/s, Driver CPU: 27.4%, Driver Memory: 38.0%
+2025-03-20 12:29:32,767 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:29:33,802 - Closing down clientserver connection
+2025-03-20 12:29:53,460 - Using default tokenizer.
+2025-03-20 12:30:49,461 - Dataset: hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_10pct.json, Workers: 2, Time: 69.37s, Rows: 38407, Throughput: 553.65 rows/s, Driver CPU: 30.6%, Driver Memory: 38.5%
+2025-03-20 12:30:49,463 - Failed to fetch executor metrics: 'SparkContext' object has no attribute 'getJobIdsForGroup'
+2025-03-20 12:30:49,920 - Closing down clientserver connection
