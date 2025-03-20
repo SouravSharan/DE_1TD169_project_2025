@@ -1,0 +1,4 @@
+2025-03-20 20:55:20,003 - Data: corpus-webis-tldr-17_10pct, Workers: 2, Cores: 2, Time: 488.64s, Rows: 384833, Throughput: 787.56 rows/s, Driver CPU: 6.6%, Driver Memory: 29.5%
+2025-03-20 20:55:20,703 - Closing down clientserver connection
+2025-03-20 21:02:32,792 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 2, Cores: 2, Time: 414.82s, Rows: 308203, Throughput: 742.98 rows/s, Driver CPU: 0.8%, Driver Memory: 29.2%
+2025-03-20 21:02:33,468 - Closing down clientserver connection

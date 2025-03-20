@@ -19,9 +19,11 @@ print(f"Total rows in dataset: {total_rows}")
 
 # Define subset percentages
 subsets = {
-    "10pct": 0.1,
+    "5pct": 0.05,
     "20pct": 0.2,
-    "50pct": 0.5,
+    "40pct": 0.4,
+    "60pct": 0.6,
+    "80pct": 0.8,
     "100pct": 1
 }
 

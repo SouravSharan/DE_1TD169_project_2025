@@ -1,0 +1,536 @@
+2025-03-20 17:25:09,497 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:25:10,501 - Closing down clientserver connection
+2025-03-20 17:25:10,501 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:25:10,536 - Closing down clientserver connection
+2025-03-20 17:30:27,363 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:30:27,750 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:30:28,651 - Closing down clientserver connection
+2025-03-20 17:30:28,650 - Closing down clientserver connection
+2025-03-20 17:30:28,832 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:30:28,833 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:30:28,849 - Closing down clientserver connection
+2025-03-20 17:30:28,850 - Closing down clientserver connection
+2025-03-20 17:30:28,851 - Closing down clientserver connection
+2025-03-20 17:30:36,741 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:30:37,579 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:30:37,807 - Closing down clientserver connection
+2025-03-20 17:30:37,808 - Closing down clientserver connection
+2025-03-20 17:30:37,863 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:30:37,865 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:30:37,906 - Closing down clientserver connection
+2025-03-20 17:30:37,905 - Closing down clientserver connection
+2025-03-20 17:30:38,077 - Closing down clientserver connection
+2025-03-20 17:31:32,547 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:31:33,343 - Closing down clientserver connection
+2025-03-20 17:31:33,257 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:31:33,344 - Closing down clientserver connection
+2025-03-20 17:31:33,582 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:31:33,583 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:31:33,598 - Closing down clientserver connection
+2025-03-20 17:31:33,599 - Closing down clientserver connection
+2025-03-20 17:31:33,766 - Closing down clientserver connection
+2025-03-20 17:31:33,766 - Closing down clientserver connection
+2025-03-20 17:31:33,766 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,767 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,768 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,769 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,770 - Closing down clientserver connection
+2025-03-20 17:31:33,771 - Closing down clientserver connection
+2025-03-20 17:31:33,775 - Closing down clientserver connection
+2025-03-20 17:31:33,775 - Closing down clientserver connection
+2025-03-20 17:31:33,775 - Closing down clientserver connection
+2025-03-20 17:31:33,775 - Closing down clientserver connection
+2025-03-20 17:31:33,776 - Closing down clientserver connection
+2025-03-20 17:31:33,776 - Closing down clientserver connection
+2025-03-20 17:35:36,194 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:35:37,802 - Closing down clientserver connection
+2025-03-20 17:35:37,138 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:35:37,802 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:35:37,803 - Closing down clientserver connection
+2025-03-20 17:35:37,822 - Closing down clientserver connection
+2025-03-20 17:41:03,183 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:41:04,184 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:41:08,383 - Closing down clientserver connection
+2025-03-20 17:41:08,384 - Closing down clientserver connection
+2025-03-20 17:41:08,538 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:41:08,539 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:41:08,644 - Closing down clientserver connection
+2025-03-20 17:41:08,644 - Closing down clientserver connection
+2025-03-20 17:41:08,645 - Closing down clientserver connection
+2025-03-20 17:41:08,647 - Closing down clientserver connection
+2025-03-20 17:43:40,650 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:43:41,760 - Closing down clientserver connection
+2025-03-20 17:43:41,778 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:43:41,815 - Closing down clientserver connection
+2025-03-20 17:43:41,817 - Closing down clientserver connection
+2025-03-20 17:48:47,822 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:48:50,630 - Closing down clientserver connection
+2025-03-20 17:48:48,179 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:48:50,751 - Closing down clientserver connection
+2025-03-20 17:48:50,826 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:48:50,827 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:48:50,889 - Closing down clientserver connection
+2025-03-20 17:48:50,888 - Closing down clientserver connection
+2025-03-20 17:48:50,890 - Closing down clientserver connection
+2025-03-20 17:48:50,890 - Closing down clientserver connection
+2025-03-20 17:49:51,756 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:49:51,756 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 17:49:53,146 - Closing down clientserver connection
+2025-03-20 17:49:53,146 - Closing down clientserver connection
+2025-03-20 17:49:53,147 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:49:53,147 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 17:49:53,165 - Closing down clientserver connection
+2025-03-20 17:49:53,165 - Closing down clientserver connection
+2025-03-20 17:49:53,167 - Closing down clientserver connection
+2025-03-20 17:49:53,167 - Closing down clientserver connection
+2025-03-20 19:10:51,219 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=4>
+2025-03-20 19:10:51,323 - Closing down clientserver connection
+2025-03-20 19:10:51,323 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=4>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 19:10:51,757 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o23.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+2025-03-20 19:10:52,040 - Closing down clientserver connection
+2025-03-20 19:10:52,041 - Closing down clientserver connection
+2025-03-20 19:10:51,758 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-03-20 19:10:52,041 - Closing down clientserver connection
+2025-03-20 19:10:52,042 - Closing down clientserver connection
+2025-03-20 19:10:52,042 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o23.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 19:10:52,044 - Closing down clientserver connection
+2025-03-20 19:23:30,730 - Data: corpus-webis-tldr-17_10pct, Workers: 1, Cores: 1, Time: 714.59s, Rows: 384833, Throughput: 538.53 rows/s, Driver CPU: 2.0%, Driver Memory: 28.4%
+2025-03-20 19:23:31,750 - Closing down clientserver connection
+2025-03-20 19:33:46,452 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 1, Cores: 1, Time: 597.53s, Rows: 308203, Throughput: 515.79 rows/s, Driver CPU: 1.4%, Driver Memory: 28.6%
+2025-03-20 19:33:47,020 - Closing down clientserver connection
+2025-03-20 19:40:40,426 - Data: corpus-webis-tldr-17_10pct_40pct, Workers: 1, Cores: 1, Time: 395.98s, Rows: 154119, Throughput: 389.21 rows/s, Driver CPU: 1.2%, Driver Memory: 28.4%
+2025-03-20 19:40:41,136 - Closing down clientserver connection
+2025-03-20 19:52:49,781 - Data: corpus-webis-tldr-17_10pct, Workers: 2, Cores: 1, Time: 711.23s, Rows: 384833, Throughput: 541.08 rows/s, Driver CPU: 0.7%, Driver Memory: 28.4%
+2025-03-20 19:52:50,290 - Closing down clientserver connection
+2025-03-20 20:04:58,002 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 2, Cores: 1, Time: 710.27s, Rows: 308203, Throughput: 433.92 rows/s, Driver CPU: 1.8%, Driver Memory: 28.5%
+2025-03-20 20:04:58,623 - Closing down clientserver connection
+2025-03-20 20:11:27,839 - Data: corpus-webis-tldr-17_10pct_40pct, Workers: 2, Cores: 1, Time: 371.93s, Rows: 154119, Throughput: 414.38 rows/s, Driver CPU: 1.9%, Driver Memory: 28.9%
+2025-03-20 20:11:28,677 - Closing down clientserver connection
+2025-03-20 20:23:31,368 - Data: corpus-webis-tldr-17_10pct, Workers: 4, Cores: 1, Time: 705.43s, Rows: 384833, Throughput: 545.53 rows/s, Driver CPU: 2.1%, Driver Memory: 28.9%
+2025-03-20 20:23:32,084 - Closing down clientserver connection
+2025-03-20 20:34:03,240 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 4, Cores: 1, Time: 613.77s, Rows: 308203, Throughput: 502.15 rows/s, Driver CPU: 2.1%, Driver Memory: 29.8%
+2025-03-20 20:34:03,962 - Closing down clientserver connection
+2025-03-20 20:40:35,197 - Data: corpus-webis-tldr-17_10pct_40pct, Workers: 4, Cores: 1, Time: 373.95s, Rows: 154119, Throughput: 412.14 rows/s, Driver CPU: 2.4%, Driver Memory: 28.9%
+2025-03-20 20:40:36,029 - Closing down clientserver connection
+2025-03-20 20:46:32,429 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=4>
+2025-03-20 20:46:32,432 - Closing down clientserver connection
+2025-03-20 20:46:32,433 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=4>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 20:46:32,438 - Error while receiving.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o23.sc
+2025-03-20 20:46:32,439 - Closing down clientserver connection
+2025-03-20 20:46:32,440 - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/home/ubuntu/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o23.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/ubuntu/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-03-20 20:46:32,440 - Closing down clientserver connection
+2025-03-20 20:46:32,443 - Closing down clientserver connection
