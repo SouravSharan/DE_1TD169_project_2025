@@ -13,7 +13,7 @@ full_data_path = "hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct.json"
 # Read the full dataset
 df = spark.read.json(full_data_path)
 
-# Verify row count (optional)
+# Verify row count 
 total_rows = df.count()
 print(f"Total rows in dataset: {total_rows}")
 

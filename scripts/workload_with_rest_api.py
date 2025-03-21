@@ -81,7 +81,7 @@ avg_mem = (start_mem + end_mem) / 2
 # Log metrics in tab-separated format
 logging.info(f"{args.data_path}\t{args.num_workers}\t{processing_time:.2f}\t{row_count}\t{throughput:.2f}\t{avg_cpu:.1f}\t{avg_mem:.1f}")
 
-# Fetch executor metrics via REST API (optional)
+# Fetch executor metrics via REST API 
 try:
     response = requests.get("http://192.168.2.23:8080/api/v1/applications")
     if response.status_code == 200:

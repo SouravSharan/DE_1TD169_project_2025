@@ -2,9 +2,9 @@
 
 # Define the base command for spark-submit
 SPARK_SUBMIT="spark-submit --master spark://192.168.2.23:7077"
-PYTHON_SCRIPT="/home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_cores.py"
+PYTHON_SCRIPT="../scripts/workload.py"
 
-# Define data URLs for each data size (adjust these paths if they differ in your setup)
+# Define data URLs for each data size 
 declare -A DATA_URLS
 DATA_URLS["100%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct.json"
 DATA_URLS["80%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_80pct.json"
@@ -18,8 +18,8 @@ CORES=(1 2 3 4)
 WORKERS=(1 2 3 4)
 DATA_SIZES=("100%" "80%" "60%" "40%" "20%" "5%")
 
-# Log file for tracking submissions (optional, complements Python logging)
-LOG_FILE="experiment_submission_final_run.log"
+# Log file for tracking submissions
+LOG_FILE="../logs/experiment_submission_final_run.log"
 echo "Starting experiments at $(date)" > $LOG_FILE
 
 # Iterate over all combinations
@@ -37,7 +37,7 @@ for cores in "${CORES[@]}"; do
             echo "Submitting experiment: Cores=$cores, Workers=$workers, Data Size=$data_size"
             $CMD
 
-            # Optional: Add a small delay to avoid overwhelming the cluster (adjust as needed)
+            #delay to avoid overwhelming the cluster
             sleep 10
         done
     done

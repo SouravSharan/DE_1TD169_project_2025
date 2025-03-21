@@ -4,7 +4,7 @@
 SPARK_SUBMIT="$SPARK_HOME/bin/spark-submit"
 
 # Path to Python script
-SCRIPT_PATH="/home/ubuntu/DE_1TD169_project_2025/workload/calculate_rouge_experiments.py"
+SCRIPT_PATH="../scripts/calculate_rouge_experiments.py"
 
 # HDFS base path
 HDFS_BASE="hdfs://192.168.2.23:9000/data"
@@ -16,7 +16,7 @@ DATA_20="$HDFS_BASE/corpus-webis-tldr-17_10pct_20pct.json"     # 20% of 10% (~0.
 DATA_10="$HDFS_BASE/corpus-webis-tldr-17_10pct_10pct.json"     # 10% of 10% (~0.2 GB)
 
 # Clear previous log file
-echo -e "Dataset\tWorkers\tTime (s)\tRows\tThroughput (rows/s)\tDriver CPU (%)\tDriver Memory (%)" > rouge_experiments.log
+echo -e "Dataset\tWorkers\tTime (s)\tRows\tThroughput (rows/s)\tDriver CPU (%)\tDriver Memory (%)" > ../logs/rouge_experiments.log
 
 # Function to run an experiment
 run_exp() {

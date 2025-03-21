@@ -1,6 +1,12 @@
 # DE_1TD169_project_2025
 Data engineering I 1TD169 Project, 2025, Group 27
 
+
+
+
+
+
+
 The Hadoop/Spark cluster is now setup. To get access, follow the guide below.
 
 ### 1. Setup local machine

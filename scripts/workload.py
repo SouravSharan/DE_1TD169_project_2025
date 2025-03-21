@@ -6,6 +6,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, udf
 from pyspark.sql.types import StructType, StructField, FloatType
 from rouge_score import rouge_scorer
+import calculate_rouge
 
 # Logging setup
 logging.basicConfig(filename='rouge_experiment_final_run.log', level=logging.INFO, 
@@ -18,12 +19,6 @@ def parse_args():
     parser.add_argument('--data-url', type=str, required=True, help="HDFS URL to the input JSON data")
     return parser.parse_args()
 
-def calculate_rouge(summary, content):
-    scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
-    if not summary or not content:
-        return 0.0, 0.0, 0.0
-    scores = scorer.score(content, summary)
-    return scores['rouge1'].fmeasure, scores['rouge2'].fmeasure, scores['rougeL'].fmeasure
 
 def run_experiment(num_workers, cores, data_url):
     # Extract a simple name from the data URL for output naming
