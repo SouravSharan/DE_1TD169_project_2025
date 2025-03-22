@@ -44,7 +44,7 @@ This repository contains scripts and tools for conducting scalability experiment
   ```bash
   pip install pyspark psutil rouge-score requests pandas
 
-## Hardware:
+## Hardware
 - Cluster with 1 master (e.g., 80 GB storage) and 4 workers (e.g., 20 GB each)
 - Ubuntu OS
 
