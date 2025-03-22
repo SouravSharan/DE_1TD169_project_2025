@@ -39,7 +39,7 @@ This repository contains scripts and tools for conducting scalability experiment
 - **Software**:
   - Apache Spark (tested with 3.x)
   - Python 3.x
-  - Hadoop (optional, for HDFS-based experiments)
+  - Hadoop
 - **Python Packages**:
   ```bash
   pip install pyspark psutil rouge-score requests pandas
