@@ -1,0 +1,5 @@
+Starting experiments at Fri Mar 21 23:33:19 UTC 2025
+Running: spark-submit --master spark://192.168.2.23:7077 --deploy-mode client /home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_cores.py --num-workers 1 --cores 1 --data-url hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_60pct.json
+Running: spark-submit --master spark://192.168.2.23:7077 --deploy-mode client /home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_cores.py --num-workers 2 --cores 1 --data-url hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_60pct.json
+Running: spark-submit --master spark://192.168.2.23:7077 --deploy-mode client /home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_cores.py --num-workers 3 --cores 1 --data-url hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_60pct.json
+Running: spark-submit --master spark://192.168.2.23:7077 --deploy-mode client /home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_cores.py --num-workers 4 --cores 1 --data-url hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_60pct.json

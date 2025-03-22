@@ -8,7 +8,7 @@ from pyspark.sql.types import StructType, StructField, FloatType
 from rouge_score import rouge_scorer
 
 # Logging setup
-logging.basicConfig(filename='rouge_experiment_exp5.log', level=logging.INFO, 
+logging.basicConfig(filename='rouge_experiment_final_run.log', level=logging.INFO, 
                     format='%(asctime)s - %(message)s')
 
 def parse_args():

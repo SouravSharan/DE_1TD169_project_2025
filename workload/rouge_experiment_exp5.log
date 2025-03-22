@@ -2,3 +2,11 @@
 2025-03-20 20:55:20,703 - Closing down clientserver connection
 2025-03-20 21:02:32,792 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 2, Cores: 2, Time: 414.82s, Rows: 308203, Throughput: 742.98 rows/s, Driver CPU: 0.8%, Driver Memory: 29.2%
 2025-03-20 21:02:33,468 - Closing down clientserver connection
+2025-03-20 21:06:38,747 - Data: corpus-webis-tldr-17_10pct_40pct, Workers: 2, Cores: 2, Time: 227.99s, Rows: 154119, Throughput: 675.98 rows/s, Driver CPU: 0.8%, Driver Memory: 29.3%
+2025-03-20 21:06:39,289 - Closing down clientserver connection
+2025-03-20 21:11:09,283 - Data: corpus-webis-tldr-17_10pct, Workers: 2, Cores: 4, Time: 252.82s, Rows: 384833, Throughput: 1522.18 rows/s, Driver CPU: 1.2%, Driver Memory: 29.5%
+2025-03-20 21:11:10,300 - Closing down clientserver connection
+2025-03-20 21:15:32,024 - Data: corpus-webis-tldr-17_10pct_80pct, Workers: 2, Cores: 4, Time: 244.47s, Rows: 308203, Throughput: 1260.70 rows/s, Driver CPU: 1.1%, Driver Memory: 29.0%
+2025-03-20 21:15:32,516 - Closing down clientserver connection
+2025-03-20 21:18:03,616 - Data: corpus-webis-tldr-17_10pct_40pct, Workers: 2, Cores: 4, Time: 131.99s, Rows: 154119, Throughput: 1167.62 rows/s, Driver CPU: 1.6%, Driver Memory: 29.0%
+2025-03-20 21:18:04,165 - Closing down clientserver connection

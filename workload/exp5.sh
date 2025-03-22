@@ -8,15 +8,18 @@ PYTHON_SCRIPT="/home/ubuntu/DE_1TD169_project_2025/workload/calc_rouge_with_core
 declare -A DATA_URLS
 DATA_URLS["100%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct.json"
 DATA_URLS["80%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_80pct.json"
+DATA_URLS["60%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_60pct.json"
 DATA_URLS["40%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_40pct.json"
+DATA_URLS["20%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_20pct.json"
+DATA_URLS["5%"]="hdfs://192.168.2.23:9000/data/corpus-webis-tldr-17_10pct_5pct.json"
 
 # Define experiment configurations
-CORES=(2 4)
-WORKERS=(2)
-DATA_SIZES=("100%" "80%" "40%")
+CORES=(1 2 3 4)
+WORKERS=(1 2 3 4)
+DATA_SIZES=("60%")
 
 # Log file for tracking submissions (optional, complements Python logging)
-LOG_FILE="experiment_submission_exp5.log"
+LOG_FILE="experiment_submission_final_run.log"
 echo "Starting experiments at $(date)" > $LOG_FILE
 
 # Iterate over all combinations
