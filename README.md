@@ -1,86 +1,95 @@
 # DE_1TD169_project_2025
 Data engineering I 1TD169 Project, 2025, Group 27
 
+# Spark and Hadoop Scalability Experiments
+This repository contains scripts and tools for conducting scalability experiments using Apache Spark on a standalone cluster. The project focuses on processing large datasets (e.g TLDR summaries) to benchmark Spark’s performance under varying worker counts, data sizes, and resource configurations. Experiments measure runtime, throughput, CPU/memory usage, and scalability, with results logged for analysis.
 
-
-
-
-
-
-The Hadoop/Spark cluster is now setup. To get access, follow the guide below.
-
-### 1. Setup local machine
-Save the key posted in the WhatsApp group to a `.pem` file.
-Create or modify the file ~/.ssh/config on your local (laptop) computer by adding a section like the one shown below:
-Replace `/path/to/keyfile.pem` with your actual path.
+## Project Structure
 ```
-Host 130.238.27.215
-KexAlgorithms +diffie-hellman-group1-sha1
-        User ubuntu
-        # modify this to match the name of your key
-        IdentityFile /path/to/keyfile.pem
-        # Spark master web GUI
-        LocalForward 8080 192.168.2.204:8080
-        # HDFS namenode web gui
-        LocalForward 9870 192.168.2.204:9870
-        # Python notebook
-        LocalForward 8888 localhost:8888
-        # Spark applications
-        LocalForward 4040 localhost:4040
-        LocalForward 4041 localhost:4041
-        LocalForward 4042 localhost:4042
-        LocalForward 4043 localhost:4043
-        LocalForward 4044 localhost:4044
-        LocalForward 4045 localhost:4045
-        LocalForward 4046 localhost:4046
-        LocalForward 4047 localhost:4047
-        LocalForward 4048 localhost:4048
-        LocalForward 4049 localhost:4049
-        LocalForward 4050 localhost:4050
-        LocalForward 4051 localhost:4051
-        LocalForward 4052 localhost:4052
-        LocalForward 4053 localhost:4053
-        LocalForward 4054 localhost:4054
-        LocalForward 4055 localhost:4055
-        LocalForward 4056 localhost:4056
-        LocalForward 4057 localhost:4057
-        LocalForward 4058 localhost:4058
-        LocalForward 4059 localhost:4059
-        LocalForward 4060 localhost:4060
+.
+├── configure_dataset/         # Scripts for dataset preparation
+│   ├── create_subset.py      # Creates a single subset from a local file
+│   └── create_subsets_on_hdfs.py  # Creates multiple subsets on HDFS
+├── logs/                     # Log files from experiments
+│   ├── experiment_submission_.log  # Submission logs
+├── README.md                 # This file
+├── scalability_experiments/  # Bash scripts for running experiments
+│   ├── experiment_1.sh       # Exp 1: Varying workers with data size
+│   ├── experiment_2_3.sh     # Exp 2 & 3: Fixed workers, varying data
+│   ├── experiment_4.sh       # Exp 4: Custom configuration
+│   └── experiment_5.sh       # Exp 5: Final experiment
+├── scripts/                  # Core Python scripts and notebooks
+│   ├── calculate_rouge.py    # ROUGE score calculation workload
+│   ├── data_analysis.ipynb   # Jupyter notebook for data analysis
+│   ├── format_outputs.py     # Formats experiment outputs
+│   ├── workload.py           # workload script
+│   └── workload_with_rest_api.py  # Workload with Spark REST API
+└── setup/                    # Cluster setup scripts
+├── configure_cluster.sh  # Configures Spark cluster
 ```
 
-Now you can ssh into our VM using
-```
-ssh 130.238.27.215
-```
-### 2. Hadoop
-The NameNode is `192.168.2.204`. We currently have one DataNode. You should now be able to browse our HDFS on the Hadoop Web GUI at
-
-[http://localhost:9870/explorer.html#/user/ubuntu/](http://localhost:9870/explorer.html#/user/ubuntu/)
-
-In the folder `small_data` there are two subsets of the Reddit dataset, one containing 10 records and one with 10 000 records. These are ment for starting to experiment with before we scale up our solution.
-
-### 3. Spark
-The master node is `192.168.2.204`. We currently have one worker. You can reach the Spark Web UI at
-
-[http://localhost:8080/](http://localhost:8080/)
-
-When a Spark session is running on the cluster you can reach the application UI at
-
-[http://localhost:4040/](http://localhost:4040/)
+## Features
+- **Scalability Testing**: Experiments vary dataset sizes (e.g., 10%, 20%, 50%, 100%) and worker counts (1-4) to assess Spark performance.
+- **Workloads**: Includes ROUGE score calculation (for text summarization).
+- **Resource Monitoring**: Tracks driver CPU/memory usage with `psutil` and attempts executor metrics via Spark REST API.
+- **Automation**: Bash scripts automate experiment execution and log results in a structured format.
 
 
-### 4. Jupyter Notebook
-Start the jupyter server by running
-```
-jupyter server --port=8888 --no-browser --ip=0.0.0.0 --certfile ssl_cert/mycert.pem --keyfile=ssl_cert/mykey.key
-```
-You can reach the jupyter notebook from 
+## Prerequisites
+- **Software**:
+  - Apache Spark (tested with 3.x)
+  - Python 3.x
+  - Hadoop (optional, for HDFS-based experiments)
+- **Python Packages**:
+  ```bash
+  pip install pyspark psutil rouge-score requests pandas
 
-[https://localhost:8888/lab/tree/DE_1TD169_project_2025/data_analysis.ipynb](https://localhost:8888/lab/tree/DE_1TD169_project_2025/data_analysis.ipynb)
-
-The password is  `group27password`.
-
-The notebook loads one of the subsets from our HDFS and is ment as a starting point for further analysis.
+## Hardware:
+- Cluster with 1 master (e.g., 80 GB storage) and 4 workers (e.g., 20 GB each)
+- Ubuntu OS
 
 
+## Setup
+1. **Clone the Repository**:
+   ```bash
+   git clone git@github.com:SouravSharan/DE_1TD169_project_2025.git
+   cd DE_1TD169_project_2025.
+   ```
+
+2. **Configure Cluster**:
+   - Run setup scripts on each node:
+     ```bash
+     ./setup/setup_vm.sh  # On master and workers
+     ```
+   - Update cluster config:
+     ```bash
+     ./setup/configure_cluster.sh
+     ./setup/update_hosts.sh
+     ```
+
+3. **Start Spark Cluster**:
+   ```bash
+   $SPARK_HOME/sbin/start-master.sh  # On master
+   $SPARK_HOME/sbin/start-worker.sh spark://master-ip:7077  # On each worker
+   ```
+4. Upload data on HDFS
+## Usage
+1. **Prepare Dataset**:
+   - Use `data_analysis.ipynb` for data analysis.
+   - For HDFS:
+     ```bash
+     python configure_dataset/create_subsets_on_hdfs.py
+     ```
+     
+3. **Run Experiments**:
+   - Example: Experiment 1 (varying workers):
+     ```bash
+     ./scalability_experiments/experiment_5.sh
+     ```
+   - Check logs in `logs/` for results.
+
+4. **Analyze Results**:
+   - View logs (e.g., `logs/rouge_experiments.log`):
+     ```
+     Data: corpus-webis-tldr-17_10pct, Workers: 4, Cores: 2, Time: 25.30s, Rows: 16845943, Throughput: 665846.76 rows/s, Driver CPU: 35.2%, Driver Memory: 40.1%
+     ```
