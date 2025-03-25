@@ -117,4 +117,5 @@ This repository contains scripts and tools for conducting scalability experiment
 
 *Table truncated for brevity.*
 
+[![CSV Preview](https://img.shields.io/badge/View-CSV-blue)]([https://github.com/your-username/your-repo/blob/main/data.csv](https://github.com/SouravSharan/DE_1TD169_project_2025/blob/main/Results%20-%20final%20experiment.csv))
 
