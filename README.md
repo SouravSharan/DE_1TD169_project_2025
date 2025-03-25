@@ -116,6 +116,3 @@ This repository contains scripts and tools for conducting scalability experiment
 | 2025-03-22 00:35:18 | corpus-webis-tldr-17_10pct_60pct | 60%       | 3       | 3     | 158.83  | 231388  | 1456.81              | 0.006         | 0.282            |
 
 *Table truncated for brevity.*
-
-[![CSV Preview](https://img.shields.io/badge/View-CSV-blue)]([https://github.com/your-username/your-repo/blob/main/data.csv](https://github.com/SouravSharan/DE_1TD169_project_2025/blob/main/Results%20-%20final%20experiment.csv))
-
